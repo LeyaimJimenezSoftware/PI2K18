@@ -4,7 +4,9 @@ const TeamControler = require('../controllers/team_controller'),
     tc = new TeamControler(); //Instancia en la clase
 
 router
-    .get('/', tc.getAll)
+    
+    .get('/', tc.index)
+    .get('/getAll', tc.getAll)
     .get('/agregar', tc.addForm)
     .get('/editar/:NoSucursal', tc.getOne)
     .post('/', tc.save)

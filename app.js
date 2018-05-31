@@ -3,10 +3,10 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     morgan = require('morgan'),
     restFul = require('express-method-override')('_method'),
-    routes = require('./routes/team_router_sur'),
+    routes = require('./routes/team_router'),
     favicon = require('serve-favicon')(`${__dirname}/public/favicon.ico`),
     publicDir = express.static(`${__dirname}/public`),
-    viewDir = `${__dirname}/views/Sucursal`,
+    viewDir = `${__dirname}/views`,
     port = (process.env.PORT || 3000 );
 
 let app = express();

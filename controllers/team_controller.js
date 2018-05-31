@@ -5,7 +5,7 @@ class TeamController {
     getAll(req, res, next) {
         tm.getAll((err, data) => {
             if (!err) {
-                res.render('index', {
+                res.render('list', {
                     title: 'Autos',
                     data: data
                 }); 
@@ -65,6 +65,9 @@ class TeamController {
     addForm(req, res, next) {
         res.render('add', { title: 'Agregar Contacto' });
     }
+     index(req,res,next){
+        res.render('index');
+     }  
 
     error404(req, res, next) {
         let err = new Error();
